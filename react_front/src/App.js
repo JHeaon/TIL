@@ -1,12 +1,24 @@
-import './App.css';
+import React, { useState } from 'react';
 
-function App() {
+export default function App() {
+    
+  // const [value, setValue] = useState()
+  const [message, setMessage] = useState("Invalid message")
+  
+  const inputHandler = (event) => {
+      if (event.target.value.length < 3){
+          setMessage("Invalid message")
+      }
+      else{
+          setMessage("Valid message")
+      }
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
-    </div>
+      <form>
+          <label>Your message</label>
+          <input type="text" onChange={inputHandler}/>
+          <p>{message}</p>
+      </form>
   );
 }
-
-export default App;
