@@ -9,4 +9,3 @@ Today I learn something to study
 - django
 - javascript
 - react
-- 난 쓰레기야
